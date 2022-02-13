@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -10,9 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-green-900 flex flex-col items-center justify-center font-bold text-3xl w-full h-screen">
-        <h1 className="">BrainGhost</h1>
-        <h1 className="underline">Hello world!</h1>
+      <main className="">
+        <Header />
       </main>
     </div>
   );
