@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 
       <main className="">
         <Header />
+        <Hero />
       </main>
     </div>
   );
