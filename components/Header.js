@@ -14,7 +14,7 @@ const Header = () => {
     searchBar: `flex flex-1 mx-[.8rem]  w-max-[520px] items-center bg-[#363840] rounded-[.8rem] hover:bg-[#4c505c]`,
     searchIcon: `text-[#8a939b] mx-3 font-bold text-xl`,
     SearchInput: `h-[2.6rem] w-full bg-transparent  border-0 outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]`,
-    headerItems: `flex items-center justify-end`,
+    headerItems: `hidden md:flex items-center justify-end`,
     headerItem: ` px-4  text-[#c8cacc] font-bold hover:text-white cursor-pointer `,
     headerIcon: `text-[#8a939b] text-3xl px-4  hover:text-white cursor-pointer `,
   };
