@@ -1,7 +1,9 @@
 import { useWeb3 } from "@3rdweb/hooks";
 import Head from "next/head";
+import Image from "next/image";
 import { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import metamask from "../assests/metamask-fox.svg";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import { client } from "../lib/sanityClient";
@@ -24,7 +26,7 @@ export default function Home() {
   const style = {
     wrapper: ` `,
     walletConnectWrapper: ` bg-[#202225] flex flex-col justify-center items-center h-screen bg-[#3b3d42]`,
-    button: `border border-[#282b2f] bg-[#2181e2]  text-gray-200 hover:bg-[#42a0ff] p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer`,
+    button: `flex items-center border border-[#282b2f] bg-[#2181e2]  text-gray-200 hover:bg-[#42a0ff] p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer`,
     details: `text-lg text-center text-[#99a1a8] mt-4`,
   };
   useEffect(() => {
@@ -61,6 +63,7 @@ export default function Home() {
               className={style.button}
               onClick={() => connectWallet("injected")}
             >
+              <Image src={metamask} />
               Metamask - Connet Wallet
             </button>
             <div className={style.details}>
