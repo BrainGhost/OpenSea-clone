@@ -1,8 +1,9 @@
+import Router from "next/router";
 import React, { useEffect, useState } from "react";
 import { BiHeart } from "react-icons/bi";
 
 const style = {
-  wrapper: `bg-[#303339] flex-auto w-[14rem] h-[22rem] my-10 mx-5 rounded-2xl overflow-hidden cursor-pointer`,
+  wrapper: `bg-[#303339] flex-auto w-[14rem] h-[22rem] my-3 md:my-10 mx-5 rounded-2xl overflow-hidden cursor-pointer`,
   imgContainer: `h-2/3 w-full overflow-hidden flex justify-center items-center`,
   nftImg: `w-full object-cover`,
   details: `p-3`,
@@ -23,7 +24,7 @@ const NFTcard = ({ nftItem, title, listings }) => {
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
-    const listing = listings.find((listing) => listing.asset.id === nftItem.if);
+    const listing = listings.find((listing) => listing.asset.id === nftItem.id);
     if (Boolean(listing)) {
       setIsListed(true);
       setPrice(listing.buyoutCurrencyValuePerToken.displayValue);
@@ -35,8 +36,8 @@ const NFTcard = ({ nftItem, title, listings }) => {
       className={style.wrapper}
       onClick={() => {
         Router.push({
-          pathname: `/assets/${nftListed.id}`,
-          querry: { isListed },
+          pathname: `/nfts/${nftItem.id}`,
+          query: { isListed: isListed },
         });
       }}
     >
